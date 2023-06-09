@@ -16,28 +16,28 @@ export class LandingComponent {
   sections = [
     {
       title: 'Consultations',
-      image: '/assets/images/circles/consultations.jpg',
+      image: './assets/images/circles/consultations.jpg',
       target: 'consultations',
     },
     {
       title: 'Counselling',
-      image: '/assets/images/circles/counselling.jpg',
+      image: './assets/images/circles/counselling.jpg',
       target: 'counselling',
     },
     {
       title: 'Life Coaching',
-      image: '/assets/images/circles/life-coaching.jpg',
+      image: './assets/images/circles/life-coaching.jpg',
       target: 'life-coaching',
     },
     {
       title: 'Couple Counselling',
       description: 'Brief description text goes here',
-      image: '/assets/images/circles/couple-counselling.jpg',
+      image: './assets/images/circles/couple-counselling.jpg',
       target: 'couple-counselling',
     },
     {
       title: 'Trauma Therapy',
-      image: '/assets/images/circles/emdr.png',
+      image: './assets/images/circles/emdr.png',
       target: 'trauma-therapy',
     },
   ];

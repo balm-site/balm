@@ -54,6 +54,7 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
+    "angular-cli-ghpages": "^1.0.6",
     "cypress": "^12.11.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
@@ -66,5 +67,10 @@
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.0.2"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "angular-cli-ghpages@1.0.6": "patches/angular-cli-ghpages@1.0.6.patch"
+    }
   }
 }

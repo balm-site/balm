@@ -151,6 +151,14 @@
         }
       },
       "defaultConfiguration": "production"
+    },
+    "deploy": {
+      "executor": "angular-cli-ghpages:deploy",
+      "options": {
+        "cname": "",
+        "buildTarget": "balm:prerender:production",
+        "outputPath": "dist/balm/browser"
+      }
     }
   }
 }
