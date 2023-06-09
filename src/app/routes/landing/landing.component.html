@@ -1,0 +1,159 @@
+<div class="page-header" id="page-header">
+  <img
+    class="page-header-logo animated fadeInUp"
+    src="/assets/images/images/Balm_Logo_Transparent_White.png"
+  />
+</div>
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="page-section-header">How I Can Help You</h2>
+      <p class="page-section-subheader">
+        It is my goal to create a safe and comfortable space where we can work together to achieve
+        your goals
+      </p>
+
+      <div class="divider"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="page-section-tiles">
+      <!-- Tile Start-->
+      <div class="page-section-tile" *ngFor="let section of sections">
+        <div
+          class="page-section-tile-img"
+          [ngStyle]="{ 'background-image': 'url(' + section.image + ')' }"
+        ></div>
+        <p class="page-section-tile-header" ng-bind="section.title"></p>
+        <a class="page-section-link" [routerLink]="section.target">Find Out More</a>
+      </div>
+      <!-- Tile End -->
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="page-section-header" id="contact">Contact Us</h2>
+        <p class="page-section-subheader">
+          <b>Call Joanne on:</b>
+          <br />
+          028 9448 7790 <i>or</i> 077 3939 0893
+        </p>
+
+        <p class="page-section-subheader">
+          Or use the form below to contact us and we will be in touch soon!
+        </p>
+
+        <form [formGroup]="formGroup">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <input
+                id="name"
+                class="form-control"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                formControlName="name"
+              />
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <input
+                id="phone"
+                class="form-control"
+                type="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                formControlName="phone"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <input
+                id="subject"
+                class="form-control"
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+                formControlName="subject"
+              />
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <input
+                id="email"
+                class="form-control"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                formControlName="email"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-md-12">
+              <textarea
+                id="message"
+                class="form-control"
+                name="message"
+                placeholder="Message"
+                required
+                formControlName="message"
+              ></textarea>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-md-12 text-right">
+              <button class="btn btn-primary" (click)="submit()">Send Message</button>
+            </div>
+          </div>
+
+          <br />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #success let-modal>
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Message Sent!</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+    Thank your for contacting us! We will be in touch soon!
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" (click)="modal.dismiss()">Dismiss</button>
+  </div>
+</ng-template>
+
+<ng-template #failure let-modal>
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Something went wrong..</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+    There seems to have been a problem. Please try again, or contact us by phone.
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" (click)="modal.dismiss()">Dismiss</button>
+  </div>
+</ng-template>

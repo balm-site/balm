@@ -1,1 +1,347 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~lato-font/css/lato-font.css';
+@import '~animate.css/animate.min.css';
+
+html,
+body {
+  font-family: Lato;
+}
+
+.navigation-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: #79c9c2;
+  background: -moz-linear-gradient(left, #79c9c2 0%, #87d9cf 50%, #79c9c3 100%);
+  background: -webkit-linear-gradient(left, #79c9c2 0%, #87d9cf 50%, #79c9c3 100%);
+  background: linear-gradient(to right, #79c9c2 0%, #87d9cf 50%, #79c9c3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79c9c2', endColorstr='#79c9c3',GradientType=1 );
+  width: 100%;
+  height: 100%;
+  max-height: 70px;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px #333;
+  transition: max-height 0.15s linear;
+  overflow: hidden;
+
+  .navigation-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navigation-header-logo {
+      width: 102px;
+      height: 100%;
+      max-height: 70px;
+      padding: 10px 0;
+      transition: all 0.15s linear;
+      margin-right: 15px;
+    }
+
+    .navigation-header-links {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+      height: 70px;
+
+      .navigation-header-link {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding: 0 14px;
+        font-size: 14px;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+        text-shadow: 0px 0px 10px #999;
+        text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .navigation-header-btn {
+      padding: 10px;
+      color: #fff;
+      transition: color 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: darken(#fff, 10%);
+      }
+    }
+  }
+}
+
+.responsive-menu {
+  position: fixed;
+  top: 70px;
+  z-index: 1000;
+  background-color: #79c9c2;
+  width: 100%;
+  box-shadow: inset 0px 2px 4px 0px #333;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+
+  &.expanded {
+    max-height: 100%;
+  }
+
+  .responsive-menu-link {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .navigation-header {
+    .navigation-header-container {
+      .navigation-header-links {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navigation-header {
+    .navigation-header-container {
+      .navigation-header-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 70px;
+  background-image: url('./assets/images/images/counselling-girl-circle.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 500px;
+  background-position: top center;
+
+  .page-header-title {
+    color: #fff;
+    text-align: center;
+  }
+
+  .page-header-logo {
+    width: 275px;
+    max-width: 100%;
+    margin: 150px auto 0;
+  }
+}
+
+.page-section-header {
+  text-align: center;
+  margin-top: 50px;
+  color: #33302e;
+}
+
+.page-section-subheader {
+  text-align: center;
+  color: #6f6f6f;
+  font-weight: 300;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.page-section-tiles {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  .page-section-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 30px 30px;
+
+    .page-section-tile-img {
+      background-position: center;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .page-section-tile-header {
+      display: block;
+      text-align: center;
+      color: #33302e;
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .page-section-tile-subheader {
+      text-align: center;
+      color: #6f6f6f;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .page-section-link {
+      font-size: 12px;
+      color: #edb39b;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: darken(#edb39b, 10%);
+      }
+    }
+  }
+}
+
+.form-control {
+  font-family: Lato;
+}
+
+.contact-section {
+  // background-color: #EAF5F9;
+  background-color: #fcf7f1;
+  // padding: 35px 0;
+}
+
+.btn {
+  font-family: Lato;
+}
+
+.btn-primary {
+  background-color: #edb39b;
+  border-color: #edb39b;
+  border-radius: 0;
+}
+
+.divider {
+  width: 20px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #edb39b;
+}
+
+.main-content {
+  margin-top: 70px;
+}
+
+.page-breadcrumb-container {
+  position: relative;
+  width: 100%;
+  height: 78px;
+  margin-top: 70px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('./assets/images/images/breadcrumbs_bg.jpg');
+
+  .page-breadcrumb-title {
+    color: #fff;
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 24px;
+    padding: 26px 0;
+    text-shadow: 0px 0px 10px #000;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.1;
+  }
+}
+
+input,
+textarea {
+  &.ng-invalid.ng-touched {
+    border: 1px solid #ff4521;
+  }
+}
+
+.modal-backdrop {
+  opacity: 0.5;
+}
+
+.modal {
+  z-index: 1056 !important;
+}
+
+.resource-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin-top: 20px;
+
+  .resource-list-item {
+    display: inline-block;
+    margin: 15px 15px;
+    width: 220px;
+    height: 80px;
+
+    .name,
+    .phone {
+      text-align: center;
+      color: #6f6f6f;
+      font-weight: 400;
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .phone {
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+
+    .link {
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+
+.trauma-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  display: block;
+}

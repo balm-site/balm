@@ -1,0 +1,57 @@
+<div class="navigation-header" [ngClass]="{ condensed: condensed }">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="navigation-header-container">
+          <img
+            class="navigation-header-logo"
+            src="/assets/images/images/Balm_Logo_Transparent_White_No_Shadow.png"
+            alt=""
+          />
+
+          <div class="navigation-header-links hidden-xs hidden-sm hidden-md hidden-lg">
+            <a class="navigation-header-link" routerLink="/" balmScrollToElement="#page-header"
+              >Home</a
+            >
+            <a class="navigation-header-link" routerLink="/consultations">Consultations</a>
+            <a class="navigation-header-link" routerLink="/counselling">Counselling</a>
+            <a class="navigation-header-link" routerLink="/life-coaching">Life Coaching</a>
+            <a class="navigation-header-link" routerLink="/couple-counselling"
+              >Couple Counselling</a
+            >
+            <a class="navigation-header-link" routerLink="/trauma-therapy">Trauma Therapy</a>
+            <a class="navigation-header-link" routerLink="/about">About</a>
+            <a class="navigation-header-link" routerLink="/" balmScrollToElement="#contact"
+              >Contact</a
+            >
+          </div>
+
+          <div class="navigation-header-btn" (click)="expanded = !expanded">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="responsive-menu" [ngClass]="{ expanded: expanded }">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="responsive-menu-link" routerLink="/landing" balmScrollToElement="#page-header"
+          >Home</a
+        >
+        <a class="responsive-menu-link" routerLink="/consultations">Consultations</a>
+        <a class="responsive-menu-link" routerLink="/counselling">Counselling</a>
+        <a class="responsive-menu-link" routerLink="/life-coaching">Life Coaching</a>
+        <a class="responsive-menu-link" routerLink="/couple-counselling">Couple Counselling</a>
+        <a class="responsive-menu-link" routerLink="/trauma-therapy">Trauma Therapy</a>
+        <a class="responsive-menu-link" routerLink="/about">About</a>
+        <a class="responsive-menu-link" routerLink="/landing" balmScrollToElement="#contact"
+          >Contact</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
