@@ -37,7 +37,7 @@ export class LandingComponent {
     },
     {
       title: 'Trauma Therapy',
-      image: './assets/images/circles/emdr.png',
+      image: './assets/images/emdr.jpeg',
       target: 'trauma-therapy',
     },
   ];
