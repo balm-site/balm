@@ -21,6 +21,7 @@
       },
       "configurations": {
         "production": {
+          "baseHref": "/balm/",
           "budgets": [
             {
               "type": "initial",
