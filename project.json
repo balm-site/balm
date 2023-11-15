@@ -15,7 +15,7 @@
         "main": "./src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "./tsconfig.app.json",
-        "assets": ["./src/favicon.ico", "./src/assets", "./src/CNAME"],
+        "assets": ["./src/favicon.ico", "./src/assets"],
         "styles": ["./src/styles.scss"],
         "scripts": []
       },
@@ -150,7 +150,7 @@
     "deploy": {
       "executor": "angular-cli-ghpages:deploy",
       "options": {
-        "cname": "",
+        "cname": "balmcounselling.org",
         "buildTarget": "balm:prerender:production",
         "outputPath": "dist/balm/browser"
       }
