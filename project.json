@@ -21,7 +21,7 @@
       },
       "configurations": {
         "production": {
-          "baseHref": "/balm/",
+          "baseHref": "https://balmcounselling.org/",
           "budgets": [
             {
               "type": "initial",
@@ -151,8 +151,8 @@
       "executor": "angular-cli-ghpages:deploy",
       "options": {
         "cname": "balmcounselling.org",
-        "buildTarget": "balm:prerender:production",
-        "outputPath": "dist/balm/browser"
+        "outputPath": "dist/balm/browser",
+        "buildTarget": "balm:prerender:production"
       }
     }
   }
