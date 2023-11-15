@@ -21,14 +21,16 @@
   <div class="row">
     <div class="page-section-tiles">
       <!-- Tile Start-->
-      <div class="page-section-tile" *ngFor="let section of sections">
-        <div
-          class="page-section-tile-img"
-          [ngStyle]="{ 'background-image': 'url(' + section.image + ')' }"
-        ></div>
-        <p class="page-section-tile-header">{{ section.title }}</p>
-        <a class="page-section-link" [routerLink]="section.target">Find Out More</a>
-      </div>
+      @for (section of sections; track section) {
+        <div class="page-section-tile">
+          <div
+            class="page-section-tile-img"
+            [ngStyle]="{ 'background-image': 'url(' + section.image + ')' }"
+          ></div>
+          <p class="page-section-tile-header">{{ section.title }}</p>
+          <a class="page-section-link" [routerLink]="section.target">Find Out More</a>
+        </div>
+      }
       <!-- Tile End -->
     </div>
   </div>

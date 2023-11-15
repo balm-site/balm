@@ -49,6 +49,7 @@
     "@nx/web": "17.1.2",
     "@nx/workspace": "17.1.2",
     "@schematics/angular": "17.0.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.4.0",
     "@types/node": "16.11.7",
@@ -63,7 +64,7 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-preset-angular": "13.1.4",
     "nx": "17.1.2",
-    "prettier": "^2.6.2",
+    "prettier": "3.1.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "5.2.2"
