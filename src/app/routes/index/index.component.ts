@@ -6,13 +6,13 @@ import { RouterLink } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'balm-landing',
+  selector: 'balm-index',
   standalone: true,
   imports: [CommonModule, RouterLink, ReactiveFormsModule],
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss'],
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.scss'],
 })
-export class LandingComponent {
+export class IndexComponent {
   sections = [
     {
       title: 'Consultations',

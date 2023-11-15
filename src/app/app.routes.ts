@@ -3,7 +3,7 @@ import { AboutComponent } from './routes/about/about.component';
 import { ConsultationsComponent } from './routes/consultations/consultations.component';
 import { CounsellingComponent } from './routes/counselling/counselling.component';
 import { CoupleCounsellingComponent } from './routes/couple-counselling/couple-counselling.component';
-import { LandingComponent } from './routes/landing/landing.component';
+import { IndexComponent } from './routes/index/index.component';
 import { LifeCoachingComponent } from './routes/life-coaching/life-coaching.component';
 import { TraumaTherapyComponent } from './routes/trauma-therapy/trauma-therapy.component';
 
@@ -34,6 +34,6 @@ export const appRoutes: Route[] = [
   },
   {
     path: '',
-    component: LandingComponent,
+    component: IndexComponent,
   },
 ];
